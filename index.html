@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Landrush Demand Engine helps acquire, score, and route buyers and lessees looking for land across Africa."
+    />
+    <title>Landrush Demand Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Landrush home">
+          <span class="brand-mark">L</span>
+          <span>
+            <strong>Landrush</strong>
+            <small>Demand Engine</small>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#signals">Lead feeds</a>
+          <a href="#pipeline">Pipeline</a>
+          <a href="#playbooks">Playbooks</a>
+          <a href="#capture">Capture lead</a>
+        </div>
+        <a class="button button-small" href="#capture">Start capturing</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Customer acquisition for land buyers and lessees</p>
+          <h1>Find people actively looking for land before they settle for informal middlemen.</h1>
+          <p class="hero-text">
+            Landrush Demand Engine turns keyword searches, subreddit posts, social media conversations,
+            property forums, and popular listing sites into a qualified pipeline for land buying, leasing,
+            and distress-sale opportunities.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#capture">Capture a lead</a>
+            <a class="button button-secondary" href="#signals">View feed sources</a>
+          </div>
+          <div class="trust-strip" aria-label="Key platform capabilities">
+            <span>Keyword intent monitoring</span>
+            <span>Social listening</span>
+            <span>Lead scoring</span>
+            <span>WhatsApp follow-up</span>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Lead engine summary">
+          <div class="panel-header">
+            <span class="live-dot"></span>
+            Live demand radar
+          </div>
+          <div class="radar-card">
+            <span class="metric-label">High-intent leads this week</span>
+            <strong id="heroLeadCount">42</strong>
+            <small>Across lease, buy, and distress-sale demand</small>
+          </div>
+          <div class="mini-feed" id="miniFeed"></div>
+        </aside>
+      </section>
+
+      <section class="section shell" id="signals">
+        <div class="section-heading">
+          <p class="eyebrow">Signal acquisition</p>
+          <h2>Feeds from the places land demand already appears</h2>
+          <p>
+            Monitor public intent signals, enrich them with location and budget clues, then route the best
+            opportunities to sales, agents, or listing teams for follow-up.
+          </p>
+        </div>
+
+        <div class="source-grid" id="sourceGrid" aria-label="Lead source connectors"></div>
+      </section>
+
+      <section class="section shell">
+        <div class="split">
+          <div>
+            <p class="eyebrow">Lead intelligence</p>
+            <h2>Score intent, fit, urgency, and readiness to inspect</h2>
+            <p>
+              The engine prioritizes people who mention specific locations, budgets, timelines, acreage,
+              inspection intent, or pain points like fraud, unavailable agents, and unclear documentation.
+            </p>
+          </div>
+          <div class="score-model">
+            <div>
+              <strong>+30</strong>
+              <span>Specific location or coordinates</span>
+            </div>
+            <div>
+              <strong>+25</strong>
+              <span>Budget or lease price mentioned</span>
+            </div>
+            <div>
+              <strong>+20</strong>
+              <span>Inspection-ready timeline</span>
+            </div>
+            <div>
+              <strong>+15</strong>
+              <span>Buy, lease, or distress-sale intent</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell pipeline-section" id="pipeline">
+        <div class="section-heading">
+          <p class="eyebrow">Demand pipeline</p>
+          <h2>Qualify and route land seekers in one place</h2>
+          <p>
+            Use filters to focus on buyers, lessees, or distress-sale investors. Add new inbound leads
+            from campaigns, referrals, WhatsApp, partner forms, or field agents.
+          </p>
+        </div>
+
+        <div class="stats-row" id="statsRow"></div>
+
+        <div class="toolbar">
+          <div class="filter-group" aria-label="Lead type filters">
+            <button class="filter-button active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="Lease">Lease</button>
+            <button class="filter-button" data-filter="Buy">Buy</button>
+            <button class="filter-button" data-filter="Distress Sale">Distress</button>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">Search leads</span>
+            <input id="leadSearch" type="search" placeholder="Search by location, source, need..." />
+          </label>
+        </div>
+
+        <div class="lead-grid" id="leadGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="section shell" id="playbooks">
+        <div class="section-heading">
+          <p class="eyebrow">Growth operating system</p>
+          <h2>What the full lead-gen platform should include</h2>
+        </div>
+        <div class="playbook-grid">
+          <article>
+            <span>01</span>
+            <h3>Listen</h3>
+            <p>Track keywords like "land for lease in Ibadan", "buy farmland near Abuja", and "urgent land sale".</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Capture</h3>
+            <p>Route social comments, landing-page forms, chatbot answers, and WhatsApp messages into one queue.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Verify</h3>
+            <p>Confirm location need, budget, timeline, intended use, and whether the lead is ready to inspect.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Nurture</h3>
+            <p>Send market guides, safety advisories, listing alerts, inspection reminders, and agent introductions.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Route</h3>
+            <p>Assign hot leads to verified agents or owners by geography, listing type, and response SLA.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>Measure</h3>
+            <p>Track source quality, inspection bookings, response time, conversion, and fraud-risk flags.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell capture-section" id="capture">
+        <div class="capture-copy">
+          <p class="eyebrow">Lead capture</p>
+          <h2>Register a customer looking for land</h2>
+          <p>
+            This front-end prototype adds the lead to the local demo pipeline. A production version would send
+            this data to a CRM, sales inbox, or Landrush backend.
+          </p>
+          <ul class="check-list">
+            <li>Capture buy, lease, and distress-sale demand.</li>
+            <li>Collect budget, size, location, use case, and inspection readiness.</li>
+            <li>Score every lead and recommend a follow-up action.</li>
+          </ul>
+        </div>
+
+        <form class="lead-form" id="leadForm">
+          <div class="form-row">
+            <label>
+              Full name
+              <input name="name" type="text" placeholder="e.g. Amara Okafor" required />
+            </label>
+            <label>
+              Phone or WhatsApp
+              <input name="contact" type="tel" placeholder="+234..." required />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Intent
+              <select name="intent" required>
+                <option value="Lease">Lease land</option>
+                <option value="Buy">Buy land</option>
+                <option value="Distress Sale">Distress sale deal</option>
+              </select>
+            </label>
+            <label>
+              Preferred location
+              <input name="location" type="text" placeholder="City, state, or corridor" required />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Budget
+              <input name="budget" type="text" placeholder="e.g. ₦2m - ₦5m" required />
+            </label>
+            <label>
+              Land size
+              <input name="size" type="text" placeholder="e.g. 2 acres or 1 plot" required />
+            </label>
+          </div>
+          <label>
+            Notes
+            <textarea
+              name="notes"
+              rows="4"
+              placeholder="Use case, timeline, concerns, documents required, or inspection date..."
+            ></textarea>
+          </label>
+          <button class="button" type="submit">Add to pipeline</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-content">
+        <div>
+          <strong>Landrush Demand Engine</strong>
+          <p>Acquire and qualify customers seeking land to buy, lease, or inspect across Africa.</p>
+        </div>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>

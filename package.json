@@ -1,0 +1,10 @@
+{
+  "name": "landrush-demand-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free lead-generation platform prototype for Landrush.",
+  "scripts": {
+    "check": "node --check src/app.js",
+    "serve": "python3 -m http.server 8080"
+  }
+}
