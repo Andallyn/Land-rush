@@ -12,6 +12,17 @@
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck"
   },
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": [
+          "expo-av",
+          "react-native-sia",
+          "expo-modules-jsi"
+        ]
+      }
+    }
+  },
   "dependencies": {
     "@noble/ciphers": "2.2.0",
     "@noble/hashes": "2.2.0",
