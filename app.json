@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Murmur",
+    "slug": "murmur-voice-memos",
+    "scheme": "murmur",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.murmur.voice",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Murmur records voice memos so they can be encrypted on-device before upload.",
+        "NSFaceIDUsageDescription": "Murmur can use Face ID to unlock your encrypted memo key."
+      }
+    },
+    "android": {
+      "package": "app.murmur.voice",
+      "permissions": ["RECORD_AUDIO"]
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Murmur records voice memos so they can be encrypted on-device before upload."
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": "Murmur can use Face ID to unlock your encrypted memo key."
+        }
+      ]
+    ],
+    "extra": {
+      "siaIndexerUrl": "https://sia.storage"
+    }
+  }
+}

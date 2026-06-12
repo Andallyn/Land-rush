@@ -1,10 +1,49 @@
 {
-  "name": "landrush-demand-engine",
+  "name": "murmur-voice-memos",
   "version": "1.0.0",
   "private": true,
-  "description": "Dependency-free lead-generation platform prototype for Landrush.",
+  "description": "Private decentralized voice memo app for iOS and Android, built with Expo and Sia storage.",
+  "main": "expo/AppEntry",
   "scripts": {
-    "check": "node --check src/app.js",
-    "serve": "python3 -m http.server 8080"
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "prebuild": "expo prebuild",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck"
+  },
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": [
+          "expo-av",
+          "react-native-sia",
+          "expo-modules-jsi"
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "@noble/ciphers": "2.2.0",
+    "@noble/hashes": "2.2.0",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-native-community/netinfo": "12.0.1",
+    "@scure/base": "2.2.0",
+    "@siafoundation/sia-storage": "0.0.12",
+    "expo": "56.0.11",
+    "expo-av": "16.0.8",
+    "expo-crypto": "56.0.4",
+    "expo-file-system": "56.0.8",
+    "expo-local-authentication": "56.0.4",
+    "expo-secure-store": "56.0.4",
+    "expo-system-ui": "56.0.5",
+    "react": "19.2.3",
+    "react-native": "0.85.3",
+    "react-native-sia": "0.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.3",
+    "@types/react": "19.2.17",
+    "typescript": "6.0.3"
   }
 }
